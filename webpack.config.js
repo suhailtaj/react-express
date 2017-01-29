@@ -1,23 +1,10 @@
 var webpack = require('webpack');
 var path = require('path');
 
-// module.export = {
-// 	entry: {
-// 		'main': './client/index.js'
-// 	},
-// 	output: {
-// 		path: './dist',
-// 		filename: 'bundle.js'
-// 	},
-// 	devServer: {
-// 		contentBase: './client'
-// 	}
-// }
-
 module.exports = {
   noInfo: false,
   entry: [
-	'webpack-hot-middleware/client?reload=true',
+	 'webpack-hot-middleware/client?reload=true',
     path.resolve(__dirname, 'client/index')
   ],
   output: {
@@ -34,11 +21,19 @@ module.exports = {
   ],
   module: {
     loaders: [
-		{
-		  test: /\.js$/,
-		  include: path.join(__dirname, 'client'),
-		  loaders : ['babel']
-		}
+			{
+				test: /\.js$/,
+				include: path.join(__dirname, 'client'),
+				loaders : ['babel']
+			},
+			{
+				test: /(\.css)$/,
+				loaders: ['style', 'css']
+			},
+      {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
+      {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
+      {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
+      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
     ]
   }
 }
