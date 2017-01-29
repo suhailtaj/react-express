@@ -5,6 +5,7 @@ import routes from './routes';
 import App from './components/app.js'
 // import Home from './components/home/home.js';
 // import About from './components/about/about.js'
+import './styles/style.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 render(
