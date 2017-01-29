@@ -7,6 +7,8 @@ import App from './components/app.js'
 // import About from './components/about/about.js'
 import './styles/style.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import Util from '../node_modules/bootstrap/js/dist/util.js';
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 render(
 	<Router history={browserHistory} routes={routes}/>,
