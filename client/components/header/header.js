@@ -17,6 +17,9 @@ class Header extends React.Component {
 					<li className="nav-item px1">
 						<Link className="nav-link" to="/about">About</Link>
 					</li>
+					<li className="nav-item px1">
+						<Link className="nav-link" to="/course">Course</Link>
+					</li>
 				</ul>
 				 <ul className="nav navbar-nav ml-auto">
 				 	<li className="nav-item dropdown">
