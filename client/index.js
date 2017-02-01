@@ -7,13 +7,15 @@ import configureStore from './store/configureStore';
 import {Provider} from 'react-redux';
 // import Home from './components/home/home.js';
 // import About from './components/about/about.js'
-import './styles/style.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './styles/style.css';
 // import Util from '../node_modules/bootstrap/js/dist/util.js';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 
 
 const store = configureStore();
+
+//store.dispatch(c)
 render(
 	<Provider store={store}>
 		<Router history={browserHistory} routes={routes}/>

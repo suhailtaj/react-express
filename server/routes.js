@@ -3,9 +3,12 @@
 var path = require('path');
 
 module.exports = function (app) {
+
+	app.use('/api/home', require('./apis/home'));
+
   app.route('/version').get((req, res) => {
-	var pkg = require("../package.json");
-	var os = require('os');
+	  var pkg = require("../package.json");
+	  var os = require('os');
     res.json({
       name: pkg.name,
       version: pkg.version,
